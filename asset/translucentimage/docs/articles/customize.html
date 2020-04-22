@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Customize </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Customize ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        	<div class="container">
+        		<div class="navbar-header">
+        			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        			</button>
+        			
+        			<a class="navbar-brand" href="../index.html">
+        			  <img id="logo" src="../favicon.png" alt="" style="height: 50px; padding: 8px;filter: invert(1);">
+        			</a>
+        		</div>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			<div class="navbar navbar-right nav level1 navbar-nav" style="display: block">
+        				<li><a href="https://leloctai.com/asset/translucentimage/" rel="noopener">
+        						<strong>Home</strong>
+        					</a></li>
+        				<li><a href="https://assetstore.unity.com/packages/tools/gui/translucent-image-high-performance-blur-behind-ui-78464?aid=1011l4nGC" rel="noopener">
+        						<strong>Store</strong>
+        					</a></li>
+        			</div>
+        
+        			<form class="navbar-form navbar-right" role="search" id="search">
+        				<div class="form-group">
+        					<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        				</div>
+        			</form>
+        		</div>
+        	</div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="customize">Customize</h1>
+
+<div class="NOTE"><h5>Note</h5><p>This asset was designed to be scalable. All properties that are said to affect performance below actually do so very little.</p>
+</div>
+<p>There are 2 components that form the effect, each with their own
+parameters that control how the effect look:</p>
+<h3 id="translucent-image-source">Translucent Image Source</h3>
+<p>This component offers two modes of controlling the amount of blur:
+<em>Simple</em> and <em>Advanced</em>:</p>
+<ul>
+<li><p><strong><em>Simple</em></strong>:</p>
+<ul>
+<li><strong>Strength</strong>. Using this single property, you can (kinda) smoothly change the blur amount at runtime.</li>
+</ul>
+</li>
+<li><p><strong><em>Advanced</em></strong>:</p>
+<ul>
+<li><strong>Size</strong>: How much blurriness you want. Doesn&#39;t affect performance, but will look bad if the number too big. Also reduce flickering.</li>
+<li><strong>Iteration</strong>: Increase blur quality and blurriness when it is increased.</li>
+</ul>
+</li>
+<li><p><strong>Max Depth</strong>: Increase this property will:</p>
+<ul>
+<li>Increase flickering when background moving</li>
+<li>Increase blur level</li>
+<li>Improve performance</li>
+</ul>
+</li>
+<li><p><strong>Downsample</strong>: Decrease the resolution before processing to increase performance. Side effect includes increased blurriness and flickering.</p>
+</li>
+<li><p><strong>Blur Region</strong>: Select the region of the screen to blur. If your UI does not span the entire screen, it might be a good idea to limit this to only the part that you use to increase performance and reduce power usage.</p>
+<div class="TIP"><h5>Tip</h5><p>It easier if you tune the <code>x</code> and <code>y</code> value before <code>w</code> and <code>h</code></p>
+</div>
+</li>
+<li><p><strong>Max Update Rate</strong>: How many times the effect updates itself each second. Use this property to increase performance and decrease power usage. Set to 0 to pause, this can reduce power usage/ prevent overheat when you don&#39;t need a dynamically updating background, for example, in a pause menu.</p>
+</li>
+<li><p><strong>Preview</strong>: preview the effect in full-screen without creating a Translucent Image</p>
+</li>
+</ul>
+<h3 id="translucent-image">Translucent Image</h3>
+<ul>
+<li><p><strong>Source Image, Color, Raycast Target, Image Type</strong>: same as built-in Image.</p>
+</li>
+<li><p><strong>Material</strong>: Multiple Translucent Images using the same material share some settings, but they can batch dynamically to only take one draw call.</p>
+<div class="WARNING"><h5>Warning</h5><ul>
+<li>Material used here must use the shader UI/TranslucentImage.</li>
+<li>You should create your own Material instead of the default to avoid changes to look after asset updates.</li>
+</ul>
+</div>
+</li>
+<li><p><strong>Source</strong>: Translucent Image Source component. This is where the image gets the blurred background. It will automatically be set to the first one found, so you should make sure there one in your scene before creating any Translucent Image. You can always override this to change which camera will provide the blurred background.</p>
+</li>
+<li><p><strong>Sprite Blending</strong>: Mix between background and foreground image.</p>
+</li>
+</ul>
+<h4 id="shared-settings">Shared settings</h4>
+<p>  The following settings are shared across Translucent Images using the same material:</p>
+<ul>
+<li><p><strong>Vibrancy</strong>: How colorful you want the background to be, 0 mean black and white, negative value will invert the color.</p>
+</li>
+<li><p><strong>Brightness</strong>: Brighten or darken the background.</p>
+</li>
+<li><p><strong>Flatten</strong>: Make your Translucent Image more contrast-y against the background. Useful when you can&#39;t predict the color of the background.</p>
+</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <div class="text-center">
+              <a href="#top">Back to top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

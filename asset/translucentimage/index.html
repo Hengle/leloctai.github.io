@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Translucent Image - Beautiful and fast blurred background UI for Unity</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+	<link rel="stylesheet" href="/lib/bootstrap.min.striped.css">
+	<link rel="stylesheet" href="/scss/global.css">
+	
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-K6W69HX');
+	</script>	<meta name="Description" content="Translucent Image help you build deliciously smooth blur-behind UI in Unity, similar to those in iOS, macOS or Microsoft Fluent Design">
+	<meta property="og:title" content="Translucent Image - Beautiful and fast blurred background UI for Unity">
+	<meta property="og:description" content="Translucent Image help you build deliciously smooth blur-behind UI in Unity, similar to those in iOS, macOS or Microsoft Fluent Design">
+
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://leloctai.com/images/translucent-image.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@LeLocTai">
+	<meta name="twitter:creator" content="@LeLocTai">
+	<link rel="stylesheet" href="scss/style.css">
+	<link rel="stylesheet" href="scss/compare-bar-chart.css">
+	<link rel="stylesheet" href="scss/features-tab.css">
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "Translucent Image",
+		"operatingSystem": "Unity Engine",
+		"applicationCategory": "https://schema.org/DeveloperApplication",
+		"offers": {
+			"@type": "Offer",
+			"url": "https://assetstore.unity.com/packages/tools/gui/translucent-image-high-performance-blur-behind-ui-78464?aid=1011l4nGC",
+			"priceCurrency": "USD",
+			"price": "19.99",
+			"availability": "https://schema.org/InStock"
+		},
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": "5 / 5",
+			"ratingCount": "29"
+		},
+		"review": [{
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5 / 5"
+			},
+			"name": "Just what I've been looking for. Would have paid 10x the asking price!",
+			"author": {
+				"@type": "Person",
+				"name": "hurleybird"
+			},
+			"reviewBody": "I haven't even implemented this in my project yet, which uses a very inefficient (but great looking) blur technique which has become a major bottleneck, but just playing around in the demo scene I'm blown away.\n\nNot only can you get the effect to look darn good, unlike a lot of other high-speed blur solutions, but it's still very fast! On top of that there are other properties you can adjust to get unique effects, and the setup is dead easy....",
+			"publisher": {
+				"@type": "Organization",
+				"name": "Unity Asset Store"
+			}
+		},
+		{
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5 / 5"
+			},
+			"name": "Fast, mobile-friendly and looks amazing!",
+			"author": {
+				"@type": "Person",
+				"name": "atariboy"
+			},
+			"reviewBody": "This asset saved the day for me. I was looking for UI background blur and every other asset I found was giving me like 5-10 FPS on my Android device. This one has great performance and looks as legit Apple blur. Also author answered my question really quickly. Definitely worth the price!",
+			"publisher": {
+				"@type": "Organization",
+				"name": "Unity Asset Store"
+			}
+		},
+		{
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5 / 5"
+			},
+			"name": "Perfect",
+			"author": {
+				"@type": "Person",
+				"name": "GameEverything"
+			},
+			"reviewBody": "Just works and gives the expected results. I tried another solution before that wasn't working when publishing, this one works out of the box.",
+			"publisher": {
+				"@type": "Organization",
+				"name": "Unity Asset Store"
+			}
+		},
+		{
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5 / 5"
+			},
+			"name": "Very Good!
+",
+			"author": {
+				"@type": "Person",
+				"name": "Jean-Fabre"
+			},
+			"reviewBody": "I replaced a blur shader I created with this one and I literally just had to drag and drop it onto that blur shader's camera and change the data types of all the blur variables in the scene. Literally took five minutes to get working perfectly. Mobile performance is exceptional.",
+			"publisher": {
+				"@type": "Organization",
+				"name": "Unity Asset Store"
+			}
+		},
+		{
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5 / 5"
+			},
+			"name": "Finally!!! Great Performance on Mobile!!!",
+			"author": {
+				"@type": "Person",
+				"name": "I_Jemin"
+			},
+			"reviewBody": "\"Fastest blur algorithm available on the Assetstore\" - this is just true!!!\n\nThis blur scripts keep 60FPS on mobile! All the other background blur UI assets I bought in Assetstore, they do their works on PC. But they just crash performance on mobile, dropping FPS to 10~15, quality looks very differently for each devices.",
+			"publisher": {
+				"@type": "Organization",
+				"name": "Unity Asset Store"
+			}
+		}]
+	}
+	</script>
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6W69HX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<nav id="topnav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand nav-text" href="/">
+					<img class="brand-img" src="/favicon.png" alt="Home page">
+				</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#hero-group">Demo</a></li>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+					<li><a href="#testimonies">Testimonies</a></li>
+					<li><a href="docs" class="trailing-arrow" target="_blank" rel="noopener">Documentation</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+
+	<section id="hero-group" class="group hero-group">
+		<div class="overlay">
+			<h1>Translucent Image <br />
+				<span class="subheading">Beautiful and fast blurred background UI for Unity</span>
+			</h1>
+
+
+			<a href="https://assetstore.unity.com/packages/tools/gui/translucent-image-high-performance-blur-behind-ui-78464?aid=1011l4nGC" target="_blank" rel="noopener" class="btn-cta">
+				<button type="button" class="btn btn-lg btn-default">Get it NOW on Asset Store</button>
+			</a>
+
+			<div class="link-group">
+				<a href="docs" class="trailing-arrow" target="_blank" rel="noopener">
+					Documentation
+				</a>
+			</div>
+		</div>
+
+		<div id="demo" class="demo-wrapper">
+			<div class="webgl-demo">
+				<div id="canvas-wrapper">
+					<div id="unityContainer"></div>
+					<a class="demo">Demo ▶</a>
+					<style type="text/css">
+					#loadingBox {
+					    position: absolute;
+					    top: 50%;
+					    left: 50%;
+					    transform: translate(-50%, -50%);
+					    text-align: center;
+					}
+					
+					#spinner {
+					    width: auto;
+					}
+					
+					#loadingInfo {
+					    color: #666;
+					    width: 100%;
+					    text-transform: uppercase;
+					    text-align: center;
+					    font-size: 12px;
+					    margin: 10px 0 0 0;
+					}
+					</style>
+					<div id="loadingBox">
+					    <img id="spinner" src="/images/spinner.svg" />
+					    <p id="loadingInfo">Loading...</p>
+					</div>
+				</div>
+			</div>
+			<a class="cta" id="download" href="https://drive.google.com/uc?export=download&id=1BBD20ezsgE39sj5v8ViLeUQJ8_bEKSGO">Download
+				Android demo
+				(APK)</a>
+		</div>
+	</section>
+
+	<section id="features" class="group group-wide">
+		<figure class="features-with-desc">
+			<figcaption>
+				<h2>Fast</h2>
+				<p>Blur effect is often a huge performance hog. If you are building for mobile or low-cost computers, just attach any blur-behind shader you can find to your UI and watch your FPS drop as you crank the blur amount up.</p>
+				<p>No one like sluggish UI. That's why Translucent&nbsp;Image's blur algorithm was crafted with the limitations of low-powered GPU in mind, empowering you to reach many more people.</p>
+			</figcaption>
+
+			<div class="bar-group">
+				<figure class="speed-badge">
+					<span>108<span class="speed-badge-unit">%</span></span>
+					<figcaption>faster than Standard Asset "Blur(Optimized)"<sup>1</sup></figcaption>
+				</figure>
+				<figure class="bar-figure">
+					<div class="bar main-bar"></div>
+					<figcaption class="bar-caption">Translucent Image</figcaption>
+				</figure>
+				<figure class="bar-figure">
+					<div class="bar" style="width: 48%;"></div>
+					<figcaption class="bar-caption">Standard Asset's "Blur(Optimized)"</figcaption>
+				</figure>
+			</div>
+		</figure>
+
+		<figure class="features-with-desc">
+			<figcaption>
+				<h2>Customizable</h2>
+				<p>Have you ever added blur to your UI just to find your text unreadable because the background behind is too dark or too bright? Translucent Image give you many way to combat that, from adding a layer of color on top, to fine-tuning the color of the background</p>
+				<p>With all the customization options, Translucent&nbsp;Image fit right in to your vision. From clean and minimal to dirty cyberpunk.</p>
+			</figcaption>
+
+			<div class="features-tabbed">
+				<div class="tab-content">
+					<figure role="tabpanel" class="tab-pane fade in active" id="Vibrancy">
+						<video src="image/vibrancy.mp4" autoplay muted loop preload="auto" playsinline></video>
+						<figcaption>Make your background color more vibrant or muted. Even invert them if you want. Perfect for fullscreen effect.
+						</figcaption>
+					</figure>
+					<figure role="tabpanel" class="tab-pane fade" id="Brightness">
+						<video src="image/brightness.mp4" autoplay muted loop preload="auto" playsinline></video>
+						<figcaption>Brighten or darken the background to match the feel and aesthetic of your project.
+						</figcaption>
+					</figure>
+					<figure role="tabpanel" class="tab-pane fade" id="Flatten">
+						<video src="image/flatten.mp4" autoplay muted loop preload="auto" playsinline></video>
+						<figcaption>Intelligently adjust the color of the image, so that your content always legible on every background.
+						</figcaption>
+					</figure>
+				</div>
+
+				<div class="hide-scrollbar">
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="active"><a href="#Vibrancy" role="tab" data-toggle="tab">Vibrancy</a></li>
+						<li><a href="#Brightness" role="tab" data-toggle="tab">Brightness</a></li>
+						<li><a href="#Flatten" role="tab" data-toggle="tab">Flatten</a></li>
+					</ul>
+				</div>
+			</div>
+		</figure>
+	</section>
+
+	<section class="group">
+		<section class="extra-features">
+			<h2>And more...</h2>
+			<ul>
+				<li>Support both built-in and Universal Render pipeline</li>
+				<li>Work with all Image types - Simple, Sliced, Filled and Tiled</li>
+				<li>Work with Mask, Rect Mask and Canvas Group</li>
+				<li>Refresh rate limits - Save battery and increase performance when your background is static</li>
+				<li>Source code fully included, with inline xml documentation and online documentation</li>
+				<li>Tight integration with Unity Editor</li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="group" id="gallery">
+		<section>
+			<h2>Fantastic games using Translucent Image</h2>
+
+			<div class="gallery">
+				<figure>
+					<a href="https://store.steampowered.com/app/1069030/EarthX/"
+						target="_blank" rel="noopener">
+						<div class="yt-wrapper">
+							<iframe class="yt-player"
+									  width="1920"
+									  height="1080"
+									  src="https://www.youtube-nocookie.com/embed/DeKT6F0B-VY?autoplay=1&fs=0&loop=1&modestbranding=1&playsinline=1&color=white&iv_load_policy=3&controls=0&enablejsapi=0&mute=1&&vq=hd720&rel=0&playlist=DeKT6F0B-VY&start=36"
+									  frameborder="0"
+									  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									  allowfullscreen></iframe>
+						</div>
+						<figcaption>
+							<h3>Earth X</h3>
+						</figcaption>
+					</a>
+				</figure>
+				<figure>
+					<a href="https://www.mythicowl.com/hexologic/"
+						target="_blank" rel="noopener">
+						<div class="yt-wrapper">
+							<iframe class="yt-player"
+									  width="1920"
+									  height="1080"
+									  src="https://www.youtube-nocookie.com/embed/yXPt9nEVqnI?autoplay=1&fs=0&loop=1&modestbranding=1&playsinline=1&color=white&iv_load_policy=3&controls=0&enablejsapi=0&mute=1&&vq=hd720&rel=0&playlist=yXPt9nEVqnI"
+									  frameborder="0"
+									  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									  allowfullscreen></iframe>
+						</div>
+						<figcaption>
+							<h3>Hexologic</h3>
+						</figcaption>
+					</a>
+				</figure>
+				<figure>
+					<a href="https://store.steampowered.com/app/1173590/Dominus_Galaxia_KS_Edition/"
+						target="_blank" rel="noopener">
+						<img src="./image/gallery/dominus-galaxia-blurred-behind-background-ui.jpg"
+							  alt="Dominus Galaxia's colorful stars shine through its UI from behind. Made in Unity with Translucent Image">
+						<figcaption>
+							<h3>Dominus Galaxia</h3>
+						</figcaption>
+					</a>
+				</figure>
+			</div>
+		</section>
+	</section>
+
+	<section class="group">
+		<div class="testimonies" id="testimonies">
+			<h2>What people are saying</h2>
+			<div id="rating-avg">
+				<img class="rating-icon" src="/images/star-32.png" alt="rating star">
+				<img class="rating-icon" src="/images/star-32.png" alt="rating star">
+				<img class="rating-icon" src="/images/star-32.png" alt="rating star">
+				<img class="rating-icon" src="/images/star-32.png" alt="rating star">
+				<img class="rating-icon" src="/images/star-32.png" alt="rating star">
+
+				5 | 30 <a href="https://assetstore.unity.com/packages/tools/gui/translucent-image-high-performance-blur-behind-ui-78464?aid=1011l4nGC">reviews</a>
+			</div>
+			<figure>
+				<figcaption>
+					<img src="https://www.gravatar.com/avatar/33c40919b6f814e5f07bacfd50e48d20?s=80&default=mp"
+						  alt="hurleybird gravatar">
+					<p>hurleybird</p>
+				</figcaption>
+				<blockquote>
+					<h3>Just what I've been looking for. Would have paid 10x the asking price!</h3>
+					<p>I haven't even implemented this in my project yet, which uses a very inefficient (but great
+						looking) blur technique which has become a major bottleneck, but just playing around in the demo
+						scene I'm blown away.</p>
+					<p>Not only can you get the effect to look darn good, unlike a lot of other high-speed blur
+						solutions, but it's still very fast! On top of that there are other properties you can adjust to
+						get unique effects, and the setup is dead easy....</p>
+				</blockquote>
+			</figure>
+			<figure>
+				<figcaption>
+					<img src="https://www.gravatar.com/avatar/d56c8bbfdebcfc89e80c738211b76009?s=80&default=mp"
+						  alt="hurleybird gravatar">
+					<p>atariboy</p>
+				</figcaption>
+				<blockquote>
+					<h3>Fast, mobile-friendly and looks amazing!</h3>
+					<p>This asset saved the day for me. I was looking for UI background blur and every other asset I
+						found was giving me like 5-10 FPS on my Android device. This one has great performance and looks
+						as legit Apple blur. Also author answered my question really quickly. Definitely worth the
+						price!</p>
+				</blockquote>
+			</figure>
+			<figure>
+				<figcaption>
+					<img src="https://www.gravatar.com/avatar/1f2899aa5fc8c30aa97a7ffcc1be6cfe?s=80&default=mp"
+						  alt="hurleybird gravatar">
+					<p>GameEverything</p>
+				</figcaption>
+				<blockquote>
+					<h3>Perfect</h3>
+					<p>Just works and gives the expected results. I tried another solution before that wasn't working
+						when publishing, this one works out of the box.</p>
+				</blockquote>
+			</figure>
+			<figure>
+				<figcaption>
+					<img src="https://www.gravatar.com/avatar/ee21a3ed2f1ba52cda48dcac755a485b?s=80&default=mp"
+						  alt="hurleybird gravatar">
+					<p>Jean-Fabre</p>
+				</figcaption>
+				<blockquote>
+					<h3>Very Good!</h3>
+					<p>I replaced a blur shader I created with this one and I literally just had to drag and drop it
+						onto that blur shader's camera and change the data types of all the blur variables in the scene.
+						Literally took five minutes to get working perfectly.
+						Mobile performance is exceptional.</p>
+				</blockquote>
+			</figure>
+			<figure>
+				<figcaption>
+					<img src="https://www.gravatar.com/avatar/e93e5abc1002723ebbd3b33222b8a920?s=80&default=mp"
+						  alt="hurleybird gravatar">
+					<p>I_Jemin</p>
+				</figcaption>
+				<blockquote>
+					<h3>Finally!!! Great Performance on Mobile!!!</h3>
+					<p>"Fastest blur algorithm available on the Assetstore" - this is just true!!!</p>
+					<p>This blur scripts keep 60FPS on mobile! All the other background blur UI assets I bought in
+						Assetstore, they do their works on PC. But they just crash performance on mobile, dropping FPS
+						to 10~15, quality looks very differently for each devices.</p>
+				</blockquote>
+			</figure>
+		</div>
+	</section>
+
+	<section class="group">
+		<a href="https://assetstore.unity.com/packages/tools/gui/translucent-image-high-performance-blur-behind-ui-78464?aid=1011l4nGC" target="_blank" rel="noopener" class="btn-cta">
+			<button type="button " class="btn btn-lg btn-default">Get it NOW on Asset Store</button>
+		</a>
+		<br>
+		<br>
+		<small class="note">1: Relative performance result can vary base on hardware configuration. Number here obtained from an Intel HD
+			630
+			GPU</small>
+	</section>
+
+	<footer>
+		<div class="container">
+			<p>For support, please use the links the <a href="./docs/">documentation</a></p>
+		</div>
+	</footer>
+
+	<script src="/js/unity-progress-2019.js"></script>
+
+	<script src="/lib/jquery-3.2.1.min.js"></script>
+	<script src="/lib/bootstrap.min.js"></script>
+	<script src="js/script.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,480 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/vzttz/src/Unity Projects/Translucent Image/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LeTai.Asset.TranslucentImage.BlurAlgorithmType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LeTai.Asset.TranslucentImage.BlurAlgorithmType.html",
+          "hash": "DJzOMQjripO05POnRLdWoA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LeTai.Asset.TranslucentImage.BlurConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LeTai.Asset.TranslucentImage.BlurConfig.html",
+          "hash": "fZDLUNWhJV2W0O72VHqwcA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LeTai.Asset.TranslucentImage.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LeTai.Asset.TranslucentImage.Extensions.html",
+          "hash": "OSwTetxanDLg3RUhGYHamg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LeTai.Asset.TranslucentImage.IBlurAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LeTai.Asset.TranslucentImage.IBlurAlgorithm.html",
+          "hash": "wO9tMYxWi7aqOISpVahCPQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LeTai.Asset.TranslucentImage.ScalableBlur.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LeTai.Asset.TranslucentImage.ScalableBlur.html",
+          "hash": "FlzVmGxhFVtfWM04Tp6pGg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LeTai.Asset.TranslucentImage.ScalableBlurConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LeTai.Asset.TranslucentImage.ScalableBlurConfig.html",
+          "hash": "dHbE4ldjMt6dEnzRWkkdBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LeTai.Asset.TranslucentImage.ShaderProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LeTai.Asset.TranslucentImage.ShaderProperties.html",
+          "hash": "RyMCY4GBofzkPNSN6H6dPQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LeTai.Asset.TranslucentImage.TranslucentImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LeTai.Asset.TranslucentImage.TranslucentImage.html",
+          "hash": "t+s4mEJBbTOwwYxa6ZEUGg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LeTai.Asset.TranslucentImage.TranslucentImageSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LeTai.Asset.TranslucentImage.TranslucentImageSource.html",
+          "hash": "XObiHsVCrReIVI1BWEgeUQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LeTai.Asset.TranslucentImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LeTai.Asset.TranslucentImage.html",
+          "hash": "4lFQOKpnJ3+ffOXiHp/hqA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "vsZhkDd/kcJvEKujHiosNw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "KlNJBUxiDWcpsBSuCX07ZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/blurring-ui.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/blurring-ui.html",
+          "hash": "ieI5gXM33OCL8hxm8TkWwg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/customize.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/customize.html",
+          "hash": "q5hZEeEBqiUrxMdfAgG5vQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/faq.html",
+          "hash": "/gUF9/xPeZfEyl9ncAGcVg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started.html",
+          "hash": "IllOs64tF1RuQ8WxwHXTPw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "udvgLlggL8naUmOCVDXkzA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/support.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/support.html",
+          "hash": "BEVPtCxrBHBiAKUpt/EO9Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "my3W6BCrNSBLi+bn3alkqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/universalrp.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/universalrp.html",
+          "hash": "0PCtAG8avve3PSPBg3A7SQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/world-space.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/world-space.html",
+          "hash": "XHcIbF2/ssn0zOxRTVkNMw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/add-component.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/add-component.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/assign-blur-config-to-source.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/assign-blur-config-to-source.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/create-ui.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/create-ui.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/result.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/result.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/stacking-camera.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/stacking-camera.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ti-source.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/ti-source.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ti.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/ti.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/urp-forward-renderer-asset.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/urp-forward-renderer-asset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/urp-graphic-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/urp-graphic-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/urp-quality-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/urp-quality-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/urp-render-pipeline-asset.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/urp-render-pipeline-asset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/windows-blur.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/windows-blur.mp4"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "mtnXk2mgSVH/IIJxsCCpMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "xvwuiQSpBr7BsMstOfTKeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 10,
+          "skipped_file_count": 10
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 10,
+          "skipped_file_count": 10
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

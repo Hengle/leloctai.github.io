@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Blurring other UI elements </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Blurring other UI elements ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        	<div class="container">
+        		<div class="navbar-header">
+        			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        			</button>
+        			
+        			<a class="navbar-brand" href="../index.html">
+        			  <img id="logo" src="../favicon.png" alt="" style="height: 50px; padding: 8px;filter: invert(1);">
+        			</a>
+        		</div>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			<div class="navbar navbar-right nav level1 navbar-nav" style="display: block">
+        				<li><a href="https://leloctai.com/asset/translucentimage/" rel="noopener">
+        						<strong>Home</strong>
+        					</a></li>
+        				<li><a href="https://assetstore.unity.com/packages/tools/gui/translucent-image-high-performance-blur-behind-ui-78464?aid=1011l4nGC" rel="noopener">
+        						<strong>Store</strong>
+        					</a></li>
+        			</div>
+        
+        			<form class="navbar-form navbar-right" role="search" id="search">
+        				<div class="form-group">
+        					<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        				</div>
+        			</form>
+        		</div>
+        	</div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="blurring-other-ui-elements">Blurring other UI elements</h1>
+
+<p>Sometimes, you not only want to blur the scene, but also other UI elements. A common use case for this is for pause menu, where the pause menu UIs would be shown on top of the game HUD.</p>
+<p>Translucent Image supports this on Standard Render Pipeline. LWRP is not supported for this use case, as the pipeline does not support multiple stacking cameras</p>
+<h4 id="the-setup">The setup</h4>
+<p>Here is a typical setup:
+<img src="../images/stacking-camera.svg" alt="Blurring other UI elements">
+<em>Example setup</em></p>
+<p>And here a more detailed description of the components you&#39;ll need and their settings:</p>
+<ul>
+<li><p><strong>Canvas</strong></p>
+<ul>
+<li><p><em>Overlay Canvas (i.e. pause menu)</em></p>
+<ul>
+<li>Layer: UI</li>
+<li>Render Mode: Screen space - Overlay/Camera</li>
+<li>Render Camera: Overlay Camera (optional)
+<br></li>
+</ul>
+</li>
+<li><p><em>UI Canvas (i.e. HUD)</em></p>
+<ul>
+<li>Layer: UI</li>
+<li>Render Mode: Screen space - Camera</li>
+<li>Render Camera: UI Camera
+<br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Camera</strong></p>
+<ul>
+<li><em>Overlay Camera (optional)</em><ul>
+<li>Clear Flags: Depth only</li>
+<li>Culling Mask: UI</li>
+<li>Depth: 3
+<br></li>
+</ul>
+</li>
+<li><em>UI Camera</em><ul>
+<li>Clear Flags: Depth only</li>
+<li>Culling Mask: UI</li>
+<li>Depth: 2
+<br></li>
+</ul>
+</li>
+<li><em>Main Camera</em><ul>
+<li>Clear Flags: &lt;any&gt;</li>
+<li>Culling Mask: Everything but UI</li>
+<li>Depth: 1
+<br></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>After you have the setup, add the Translucent Image Source component to <em>UI Camera</em> and <em>Main Camera</em>. Then:</p>
+<ul>
+<li>Assign the Translucent Images &quot;Source&quot; slot to the Source &quot;below&quot; them, like shown in the diagram</li>
+<li>Please note, Translucent Images that use different Sources should also use different Material.</li>
+</ul>
+<h4 id="performance-implication">Performance implication</h4>
+<p>You can add as many cameras and canvases as you like, and set them up similarly. However, with each extra Translucent Image Source you use, the GPU will have to do more work. A workaround is to disable the Source that is not on top. In fact, both Windows 10 and macOS do this.</p>
+<p><video src="../images/windows-blur.mp4" muted="" controls="" loop="" preload="auto" playsinline="" style="width"></video>
+<em>Windows 10 only use blur on the top-most UI</em></p>
+<h4 id="why-so-complicated">Why so complicated?</h4>
+<p>Many other blur solution you can find on the web can just blur whatever behind them. While this is convenient, it also very harmful for performance - each Image has to do their own blurring.</p>
+<p>In Translucent Image, the blurring work is batched using Translucent Image Source(s). This massively reduces the amount of calculation the have to be done, especially when there&#39;s a lot of UIs.</p>
+<p>The trade-off is when we want to blur other Translucent Images, we need to use extra &quot;batches&quot;, which involve complex setup and more cost in performance.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <div class="text-center">
+              <a href="#top">Back to top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

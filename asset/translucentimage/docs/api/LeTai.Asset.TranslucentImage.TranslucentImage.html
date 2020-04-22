@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TranslucentImage
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TranslucentImage
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        	<div class="container">
+        		<div class="navbar-header">
+        			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        			</button>
+        			
+        			<a class="navbar-brand" href="../index.html">
+        			  <img id="logo" src="../favicon.png" alt="" style="height: 50px; padding: 8px;filter: invert(1);">
+        			</a>
+        		</div>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			<div class="navbar navbar-right nav level1 navbar-nav" style="display: block">
+        				<li><a href="https://leloctai.com/asset/translucentimage/" rel="noopener">
+        						<strong>Home</strong>
+        					</a></li>
+        				<li><a href="https://assetstore.unity.com/packages/tools/gui/translucent-image-high-performance-blur-behind-ui-78464?aid=1011l4nGC" rel="noopener">
+        						<strong>Store</strong>
+        					</a></li>
+        			</div>
+        
+        			<form class="navbar-form navbar-right" role="search" id="search">
+        				<div class="form-group">
+        					<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        				</div>
+        			</form>
+        		</div>
+        	</div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage">
+  
+  
+  <h1 id="LeTai_Asset_TranslucentImage_TranslucentImage" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage" class="text-break">Class TranslucentImage
+  </h1>
+  <div class="markdown level0 summary"><p>Dynamic blur-behind UI element</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  
+  <h6><strong>Namespace</strong>: <a class="xref" href="LeTai.Asset.TranslucentImage.html">LeTai.Asset.TranslucentImage</a></h6>
+  <h6><strong>Assembly</strong>: LeTai.TranslucentImage.dll</h6>
+  <h5 id="LeTai_Asset_TranslucentImage_TranslucentImage_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TranslucentImage : Image, ICanvasElement, IClippable, IMaskable, IMaterialModifier, ISerializationCallbackReceiver, ILayoutElement, ICanvasRaycastFilter, IMeshModifier</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="LeTai_Asset_TranslucentImage_TranslucentImage_brightness" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.brightness">brightness</h4>
+  <div class="markdown level1 summary"><p>Brighten/darken them image</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Brighten/darken them image&quot;)]
+[Range(-1F, 1F)]
+public float brightness</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="LeTai_Asset_TranslucentImage_TranslucentImage_flatten" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.flatten">flatten</h4>
+  <div class="markdown level1 summary"><p>Flatten the color behind to help keep contrast on varying background</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Flatten the color behind to help keep contrast on varying background&quot;)]
+[Range(0F, 1F)]
+public float flatten</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="LeTai_Asset_TranslucentImage_TranslucentImage_source" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.source">source</h4>
+  <div class="markdown level1 summary"><p>Source of blur for this image</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TranslucentImageSource source</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LeTai.Asset.TranslucentImage.TranslucentImageSource.html">TranslucentImageSource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="LeTai_Asset_TranslucentImage_TranslucentImage_spriteBlending" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.spriteBlending">spriteBlending</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Blend between the sprite and background blur&quot;)]
+[Range(0F, 1F)]
+public float spriteBlending</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="LeTai_Asset_TranslucentImage_TranslucentImage_vibrancy" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.vibrancy">vibrancy</h4>
+  <div class="markdown level1 summary"><p>(De)Saturate them image, 1 is normal, 0 is grey scale, below zero make the image negative</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;(De)Saturate them image, 1 is normal, 0 is black and white, below zero make the image negative&quot;)]
+[Range(-1F, 3F)]
+public float vibrancy</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="LeTai_Asset_TranslucentImage_TranslucentImage_ModifyMesh_" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.ModifyMesh*"></a>
+  <h4 id="LeTai_Asset_TranslucentImage_TranslucentImage_ModifyMesh_UnityEngine_Mesh_" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.ModifyMesh(UnityEngine.Mesh)">ModifyMesh(Mesh)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ModifyMesh(Mesh mesh)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Mesh</span></td>
+        <td><span class="parametername">mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LeTai_Asset_TranslucentImage_TranslucentImage_ModifyMesh_" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.ModifyMesh*"></a>
+  <h4 id="LeTai_Asset_TranslucentImage_TranslucentImage_ModifyMesh_UnityEngine_UI_VertexHelper_" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.ModifyMesh(UnityEngine.UI.VertexHelper)">ModifyMesh(VertexHelper)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ModifyMesh(VertexHelper vh)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.UI.VertexHelper</span></td>
+        <td><span class="parametername">vh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LeTai_Asset_TranslucentImage_TranslucentImage_OnDidApplyAnimationProperties_" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.OnDidApplyAnimationProperties*"></a>
+  <h4 id="LeTai_Asset_TranslucentImage_TranslucentImage_OnDidApplyAnimationProperties" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.OnDidApplyAnimationProperties">OnDidApplyAnimationProperties()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDidApplyAnimationProperties()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEngine.UI.Graphic.OnDidApplyAnimationProperties()</span></div>
+  
+  
+  <a id="LeTai_Asset_TranslucentImage_TranslucentImage_OnDisable_" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.OnDisable*"></a>
+  <h4 id="LeTai_Asset_TranslucentImage_TranslucentImage_OnDisable" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.OnDisable">OnDisable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDisable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEngine.UI.Image.OnDisable()</span></div>
+  
+  
+  <a id="LeTai_Asset_TranslucentImage_TranslucentImage_OnEnable_" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.OnEnable*"></a>
+  <h4 id="LeTai_Asset_TranslucentImage_TranslucentImage_OnEnable" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEngine.UI.Image.OnEnable()</span></div>
+  
+  
+  <a id="LeTai_Asset_TranslucentImage_TranslucentImage_Start_" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.Start*"></a>
+  <h4 id="LeTai_Asset_TranslucentImage_TranslucentImage_Start" data-uid="LeTai.Asset.TranslucentImage.TranslucentImage.Start">Start()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Start()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEngine.EventSystems.UIBehaviour.Start()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">UnityEngine.UI.ICanvasElement</span>
+  </div>
+  <div>
+      <span class="xref">UnityEngine.UI.IClippable</span>
+  </div>
+  <div>
+      <span class="xref">UnityEngine.UI.IMaskable</span>
+  </div>
+  <div>
+      <span class="xref">UnityEngine.UI.IMaterialModifier</span>
+  </div>
+  <div>
+      <span class="xref">UnityEngine.ISerializationCallbackReceiver</span>
+  </div>
+  <div>
+      <span class="xref">UnityEngine.UI.ILayoutElement</span>
+  </div>
+  <div>
+      <span class="xref">UnityEngine.ICanvasRaycastFilter</span>
+  </div>
+  <div>
+      <span class="xref">UnityEngine.UI.IMeshModifier</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <div class="text-center">
+              <a href="#top">Back to top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

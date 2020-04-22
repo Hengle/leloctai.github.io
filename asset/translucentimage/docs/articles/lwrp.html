@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>LWRP </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="LWRP ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" src="../favicon.png" alt="" style="height: 50px; padding: 8px;filter: invert(1);">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="lwrp">LWRP</h1>
+
+<h2 id="requirements">Requirements</h2>
+<p>LWRP support was tested with LWRP version <code>5.7.2</code>. LWRP on Unity 2018 is not supported at the moment, as it is still a preview package.</p>
+<p>The files required for LWRP support can be found by importing the unity package at: <code>Assets/Le Tai&#39;s Asset/TranslucentImage/LWRP support</code>. They are not included by default as they would produce errors for projects without the LWRP package.</p>
+<h2 id="tutorial">Tutorial</h2>
+<p>First, we need a <strong><em>LWRPipeline asset</em></strong>. You might already set up one for other purposes, in which case, you can skip the next 2 steps.</p>
+<p>Start by creating an <strong><em>LWRPipeline asset</em></strong> like so:</p>
+<p><img src="../images/create-render-pipeline-asset.png" alt="image"></p>
+<p>Then assign it to your <strong>Graphics Settings</strong>:</p>
+<p><img src="../images/assign-render-pipeline-asset.png" alt="image"></p>
+<p>Next, you need a Custom <strong><em>Forward Renderer</em></strong> Asset. You might also have this already, if not, create one:</p>
+<p><img src="../images/create-forward-renderer-asset.png" alt="image"></p>
+<p>And assign it to the <strong><em>LWRPipeline asset</em></strong> you just created:</p>
+<p><img src="../images/use-custom-forward-renderer.png" alt="image">
+<img src="../images/assign-forward-renderer-to-pipeline-asset.png" alt="image"></p>
+<p>Last, add <em>Translucent Image Blur Source</em> as a <em>Render Feature</em> of your Custom <strong><em>Forward Renderer</em></strong>
+<img src="../images/add-render-feature.png" alt="image"></p>
+<h2 id="limitations">Limitations</h2>
+<p>LWRP does not yet support multiple cameras overlay each other. Consequently, multiple blur layers for Translucent Images are also not available. Unity does have this functionality planned.</p>
+<p>Only the <code>Minimal</code> Demo scenes work in LWRP project, as the material used in other scenes is from the standard pipeline, and the main Demo scene uses multiple cameras, which is also not supported by LWRP.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <div class="text-center">
+              <a href="#top">Back to top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

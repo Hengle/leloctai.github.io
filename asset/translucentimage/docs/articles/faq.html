@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Frequently Asked Questions </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Frequently Asked Questions ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        	<div class="container">
+        		<div class="navbar-header">
+        			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        			</button>
+        			
+        			<a class="navbar-brand" href="../index.html">
+        			  <img id="logo" src="../favicon.png" alt="" style="height: 50px; padding: 8px;filter: invert(1);">
+        			</a>
+        		</div>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			<div class="navbar navbar-right nav level1 navbar-nav" style="display: block">
+        				<li><a href="https://leloctai.com/asset/translucentimage/" rel="noopener">
+        						<strong>Home</strong>
+        					</a></li>
+        				<li><a href="https://assetstore.unity.com/packages/tools/gui/translucent-image-high-performance-blur-behind-ui-78464?aid=1011l4nGC" rel="noopener">
+        						<strong>Store</strong>
+        					</a></li>
+        			</div>
+        
+        			<form class="navbar-form navbar-right" role="search" id="search">
+        				<div class="form-group">
+        					<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        				</div>
+        			</form>
+        		</div>
+        	</div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+
+<h2 id="will-this-asset-works-well-on-my-device">Will this asset works well on my device?</h2>
+<p>The asset should run on any device. Performance-wise, it depends on your project&#39;s existing GPU consumption, but here some general rule of thumb:</p>
+<ul>
+<li>PC/Mac/Console: Should run well on everything not too old.</li>
+<li>Android: There&#39;s too many of them with too much difference in capability. The only way to know for sure is to test the demo on your target devices. On a Samsung Galaxy S7 Edge, the demo run at 60FPS with any setting.</li>
+<li>IOS: Apple A8 and later should hit 60FPS. A7 can hit 30FPS.</li>
+</ul>
+<h2 id="the-blur-does-not-work-ui-in-the-demo-scene-just-all-white">The blur does not work. UI in the demo scene just all white.</h2>
+<p>This usually due to one of the following:</p>
+<ul>
+<li>If you&#39;re using URP, you have to do some setup, as detailed in <a href="universalrp.html">Universal Render Pipeline</a> first.</li>
+<li>Sometime Unity&#39;s import process break some random things. Try delete the whole folder and re-import the asset.</li>
+<li>Sometime the effect only so up after switching to Play mode.</li>
+</ul>
+<h2 id="can-i-smoothly-animate-the-blur-level">Can I smoothly animate the blur level?</h2>
+<p>The strength property allows for mostly smooth change of blurriness, but not fully, there is still some abrupt jump that is noticeable when changing blurriness slowly.</p>
+<p>If you just need to fade in and out, you can use the alpha component of the Color property. You can also use Canvas Group as with normal Images.</p>
+<h2 id="have-another-question">Have another question?</h2>
+<p><a href="support.html">Contact me</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <div class="text-center">
+              <a href="#top">Back to top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

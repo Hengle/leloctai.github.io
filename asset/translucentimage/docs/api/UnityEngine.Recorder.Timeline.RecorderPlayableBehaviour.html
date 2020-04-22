@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RecorderPlayableBehaviour
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RecorderPlayableBehaviour
+   ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" src="../favicon.png" alt="" style="height: 50px; padding: 8px;filter: invert(1);">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour">
+  
+  
+  <h1 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour" class="text-break">Class RecorderPlayableBehaviour
+  </h1>
+  <div class="markdown level0 summary"><p>What is it: Implements a playable that records something triggered by a Timeline Recorder Clip.
+Motivation: Allow Timeline to trigger recordings</p>
+<p>Notes:</p>
+<ul>
+<li>Totally ignores the time info comming from the playable infrastructure. Only conciders scaled time.</li>
+<li>Does not support multiple OnGraphStart...</li>
+<li>It relies on WaitForEndOfFrameComponent to inform the Session object that it's time to record to frame.</li>
+</ul>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  
+  <h6><strong>Namespace</strong>: <a class="xref" href="UnityEngine.Recorder.Timeline.html">UnityEngine.Recorder.Timeline</a></h6>
+  <h6><strong>Assembly</strong>: Assembly-CSharp.dll</h6>
+  <h5 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RecorderPlayableBehaviour : PlayableBehaviour, IPlayableBehaviour, ICloneable</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_endOfFrameComp" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.endOfFrameComp">endOfFrameComp</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">WaitForEndOfFrameComponent endOfFrameComp</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UnityEngine.Recorder.Timeline.WaitForEndOfFrameComponent.html">WaitForEndOfFrameComponent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_m_FirstOneSkipped" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.m_FirstOneSkipped">m_FirstOneSkipped</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool m_FirstOneSkipped</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_m_PlayState" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.m_PlayState">m_PlayState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlayState m_PlayState</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Playables.PlayState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_OnEnd" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.OnEnd">OnEnd</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action OnEnd</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_session_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.session*"></a>
+  <h4 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_session" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.session">session</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecordingSession session { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UnityEngine.Recorder.RecordingSession.html">RecordingSession</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_FrameEnded_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.FrameEnded*"></a>
+  <h4 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_FrameEnded" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.FrameEnded">FrameEnded()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FrameEnded()</code></pre>
+  </div>
+  
+  
+  <a id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_OnBehaviourPause_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.OnBehaviourPause*"></a>
+  <h4 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_OnBehaviourPause_UnityEngine_Playables_Playable_UnityEngine_Playables_FrameData_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)">OnBehaviourPause(Playable, FrameData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnBehaviourPause(Playable playable, FrameData info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Playables.Playable</span></td>
+        <td><span class="parametername">playable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Playables.FrameData</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEngine.Playables.PlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable, UnityEngine.Playables.FrameData)</span></div>
+  
+  
+  <a id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_OnBehaviourPlay_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.OnBehaviourPlay*"></a>
+  <h4 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_OnBehaviourPlay_UnityEngine_Playables_Playable_UnityEngine_Playables_FrameData_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)">OnBehaviourPlay(Playable, FrameData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnBehaviourPlay(Playable playable, FrameData info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Playables.Playable</span></td>
+        <td><span class="parametername">playable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Playables.FrameData</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEngine.Playables.PlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable, UnityEngine.Playables.FrameData)</span></div>
+  
+  
+  <a id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_OnGraphStart_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.OnGraphStart*"></a>
+  <h4 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_OnGraphStart_UnityEngine_Playables_Playable_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.OnGraphStart(UnityEngine.Playables.Playable)">OnGraphStart(Playable)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnGraphStart(Playable playable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Playables.Playable</span></td>
+        <td><span class="parametername">playable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEngine.Playables.PlayableBehaviour.OnGraphStart(UnityEngine.Playables.Playable)</span></div>
+  
+  
+  <a id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_OnGraphStop_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.OnGraphStop*"></a>
+  <h4 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_OnGraphStop_UnityEngine_Playables_Playable_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.OnGraphStop(UnityEngine.Playables.Playable)">OnGraphStop(Playable)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnGraphStop(Playable playable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Playables.Playable</span></td>
+        <td><span class="parametername">playable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEngine.Playables.PlayableBehaviour.OnGraphStop(UnityEngine.Playables.Playable)</span></div>
+  
+  
+  <a id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_PrepareFrame_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.PrepareFrame*"></a>
+  <h4 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_PrepareFrame_UnityEngine_Playables_Playable_UnityEngine_Playables_FrameData_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.PrepareFrame(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)">PrepareFrame(Playable, FrameData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void PrepareFrame(Playable playable, FrameData info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Playables.Playable</span></td>
+        <td><span class="parametername">playable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Playables.FrameData</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEngine.Playables.PlayableBehaviour.PrepareFrame(UnityEngine.Playables.Playable, UnityEngine.Playables.FrameData)</span></div>
+  
+  
+  <a id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_ProcessFrame_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.ProcessFrame*"></a>
+  <h4 id="UnityEngine_Recorder_Timeline_RecorderPlayableBehaviour_ProcessFrame_UnityEngine_Playables_Playable_UnityEngine_Playables_FrameData_System_Object_" data-uid="UnityEngine.Recorder.Timeline.RecorderPlayableBehaviour.ProcessFrame(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData,System.Object)">ProcessFrame(Playable, FrameData, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ProcessFrame(Playable playable, FrameData info, object playerData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Playables.Playable</span></td>
+        <td><span class="parametername">playable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Playables.FrameData</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">playerData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEngine.Playables.PlayableBehaviour.ProcessFrame(UnityEngine.Playables.Playable, UnityEngine.Playables.FrameData, System.Object)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">UnityEngine.Playables.IPlayableBehaviour</span>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <div class="text-center">
+              <a href="#top">Back to top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

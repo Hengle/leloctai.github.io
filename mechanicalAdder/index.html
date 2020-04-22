@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Virtual Mechanical Adder</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+	
+	<link rel="stylesheet" href="/scss/global-clean.css">
+	
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-K6W69HX');
+	</script>	<link rel="stylesheet" href="scss/adder.css">
+</head>
+
+<body>
+	<nav>
+		<a href="/" class="brand-link">
+			<img src="/favicon.png" alt="Home page">
+			<h1>Le Loc Tai</h1>
+		</a>
+	
+		<div>
+			<a href="/#projects">Projects</a>
+		</div>
+	</nav>
+
+	<article>
+		<h1 class="hero-text">Virtual Mechanical Adder</h1>
+		<p>This is a binary adding machine, based on Matthias Wandel's <a
+				href="http://woodgears.ca/marbleadd/">design</a>. While it would be more efficent in 2D, I just love the
+			analog feel of 3D objects</p>
+		<div class="canvas-wrapper">
+			<div id="unityContainer"></div>
+			<style type="text/css">
+			#loadingBox {
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%, -50%);
+			    text-align: center;
+			}
+			
+			#spinner {
+			    width: auto;
+			}
+			
+			#loadingInfo {
+			    color: #666;
+			    width: 100%;
+			    text-transform: uppercase;
+			    text-align: center;
+			    font-size: 12px;
+			    margin: 10px 0 0 0;
+			}
+			</style>
+			<div id="loadingBox">
+			    <img id="spinner" src="/images/spinner.svg" />
+			    <p id="loadingInfo">Loading...</p>
+			</div>
+		</div>
+		<ol>
+			<h3><strong>How to use:</strong></h3>
+			<li>Input the a number in binary form by clicking the pipes above the numbers.</li>
+			<li>Pull the upper handle to the right to confirm the number.</li>
+			<li>Repeat for as many number you want to add.</li>
+			<li>Drag the lower handle to the right to get final result.</li>
+		</ol>
+		<ul>
+			<h3>Tips:</h3>
+			<li>Overflowing the adder is fun!</li>
+			<li>You'll get some firework if you can make the ball fall out of the machine</li>
+			<li>Requires a browser with support for WebAssembly and WebGL 2.0. This include recent version of Chrome,
+				Firefox, Opera.</li>
+		</ul>
+	</article>
+
+
+	<div id="footer-seperator"></div>
+	<footer>
+		<a href="https://twitter.com/LeLocTai">Twitter</a>
+		<a href="mailto:contact@leloctai.com">Email</a>
+	</footer>
+	<script src="/js/unity-progress-2019.js"></script>
+	<script src="Marblewebgl/Build/UnityLoader.js"></script>
+	<script>
+		UnityLoader.instantiate(
+			"unityContainer",
+			"Marblewebgl/Build/Marblewebgl.json",
+			{ onProgress: UnityProgress }
+		);
+	</script></body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Universal Render Pipeline </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Universal Render Pipeline ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        	<div class="container">
+        		<div class="navbar-header">
+        			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        			</button>
+        			
+        			<a class="navbar-brand" href="../index.html">
+        			  <img id="logo" src="../favicon.png" alt="" style="height: 50px; padding: 8px;filter: invert(1);">
+        			</a>
+        		</div>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			<div class="navbar navbar-right nav level1 navbar-nav" style="display: block">
+        				<li><a href="https://leloctai.com/asset/translucentimage/" rel="noopener">
+        						<strong>Home</strong>
+        					</a></li>
+        				<li><a href="https://assetstore.unity.com/packages/tools/gui/translucent-image-high-performance-blur-behind-ui-78464?aid=1011l4nGC" rel="noopener">
+        						<strong>Store</strong>
+        					</a></li>
+        			</div>
+        
+        			<form class="navbar-form navbar-right" role="search" id="search">
+        				<div class="form-group">
+        					<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        				</div>
+        			</form>
+        		</div>
+        	</div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="universal-render-pipeline">Universal Render Pipeline</h1>
+
+<h2 id="requirements">Requirements</h2>
+<p>The URP support package is tested on URP version 7.1.7 and Unity 2019.3.</p>
+<p>The files required for URP support can be found by importing the unitypackage at: <code>TranslucentImage/UniversalRP support</code>. They are not included by default as they would produce errors for projects not using URP.</p>
+<h2 id="tutorial">Tutorial</h2>
+<ol>
+<li><p>Import the package at <code>TranslucentImage/UniversalRP support</code>.</p>
+</li>
+<li><p>Find your <strong>Forward Renderer Assets</strong>, and add <strong>TranslucentImageBlurSource</strong> to the list of <strong>Renderer Features</strong>, you may have more than 1:</p>
+<p><img src="../images/urp-forward-renderer-asset.png" alt="image"></p>
+</li>
+</ol>
+<div class="NOTE"><h5>Note</h5><p>You may have multiple <strong>Forward Renderer Assets</strong>. In which case you have to add the <strong>Renderer Feature</strong> to all of them.</p>
+</div>
+<h3 id="finding-the-forward-renderer-assets">Finding the Forward Renderer Assets</h3>
+<ol>
+<li><p>You can find the <strong>Forward Renderer asset(s)</strong> you&#39;re using by finding the <strong>Render Pipeline Settings asset</strong> in <strong>Graphic Settings</strong>:</p>
+<p><img src="../images/urp-graphic-settings.png" alt="image"></p>
+</li>
+<li><p>You may also have more <strong>Quality Setting</strong>. Be sure to check all Quality Levels: </p>
+<p><img src="../images/urp-quality-settings.png" alt="image"></p>
+</li>
+<li><p>Double click the field under the cursor in the above images will take you to the <strong>Render Pipeline Settings asset</strong>, where you can find your <strong>Forward Renderer asset(s)</strong> in the list of <strong>Renderer</strong>: </p>
+<p><img src="../images/urp-render-pipeline-asset.png" alt="image"></p>
+</li>
+</ol>
+<h2 id="limitations">Limitations</h2>
+<ul>
+<li><p>URP does not yet support multiple cameras stacking on each other. Consequently, stacking multiple blur layers for Translucent Images is also not available. Unity does have this functionality planned.</p>
+</li>
+<li><p>Some demo scene does not work with URP. There a demo scene dedicated for URP under <code>TranslucentImage/Demo/UniversalRP</code>, after you import the support package.</p>
+</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <div class="text-center">
+              <a href="#top">Back to top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

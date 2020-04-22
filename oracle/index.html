@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+	
+	<link rel="stylesheet" href="/scss/global-clean.css">
+	
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-K6W69HX');
+	</script>	<title>The Deutsch Oracle</title>
+
+	<script src="lib/math.min.js"></script>
+	<script src="js/structures.js"></script>
+	<script src="js/gates.js"></script>
+	<script src="js/oracle.js"></script>
+	<script src="js/blackbox.js"></script>
+
+	<script src="lib/p5.min.js"></script>
+	<script src="js/graphic.js"></script>
+	<script src="js/main.js"></script>
+</head>
+
+<body>
+
+	<article>
+		<section>
+			<h2>Quantum Supremacy</h2>
+			<p></p>
+		</section>
+
+		<section>
+			<h2>The problem</h2>
+			<p></p>
+			<h3>Classical Black Box</h3>
+			<div id="cbb"></div>
+		</section>
+
+		<section>
+			<h3>Quantum Black Box</h3>
+			<label>Black Box function:</label>
+			<select id="qbb-select">
+				<option value="undefined">Random</option>
+				<option value="0">Constant 0</option>
+				<option value="1">Constant 1</option>
+				<option value="2">Identity</option>
+				<option value="3">Negate</option>
+			</select>
+			<div id="qbb"></div>
+			<p></p>
+			<ul>
+				<p>Notice:</p>
+				<li>The bottom left wire is always 0 - it is NOT an input</li>
+				<li>The top right wire is always the same as (left) input wire - it is NOT an output</li>
+			</ul>
+
+			<div id="oracle"></div>
+		</section>
+	</article>
+</body>
+
+</html>

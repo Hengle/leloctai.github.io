@@ -1,0 +1,16 @@
+{
+"companyName": "LeTai",
+"productName": "Translucent Image",
+"productVersion": "3.0.2",
+"dataUrl": "Translucentwebgl.data.unityweb",
+"wasmCodeUrl": "Translucentwebgl.wasm.code.unityweb",
+"wasmFrameworkUrl": "Translucentwebgl.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "Translucentwebgl.jpg",
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF",
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.0f6"
+}

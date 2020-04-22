@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Le Loc Tai</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+	
+	<link rel="stylesheet" href="/scss/global-clean.css">
+	
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-K6W69HX');
+	</script>	<link rel="stylesheet" href="scss/home.css">
+	<link rel="stylesheet" href="fonts/RobotoMono-Medium.ttf">
+</head>
+
+<body>
+	<nav>
+		<a href="/" class="brand-link">
+			<img src="/favicon.png" alt="Home page">
+			<h1>Le Loc Tai</h1>
+		</a>
+	
+		<div>
+			<a href="/#projects">Projects</a>
+		</div>
+	</nav>
+	<article>
+		<p>Stuffs that I made.</p>
+	</article>
+
+	<article id="products">
+		<h2>Products</h2>
+		<figure>
+			<div class="img-container"><img src="images/thumb/translucent-image-thumb.jpg"></div>
+			<figcaption>
+				<h3><a href="asset/translucentimage">Translucent Image</a></h3>
+				<p>Superfast Blurred Background UI for Unity</p>
+			</figcaption>
+		</figure>
+	</article>
+
+
+	<article id="projects">
+		<h2>Projects</h2>
+
+
+		<figure>
+			<div class="img-container"><img src="images/thumb/rockgen-thumb.jpg"></div>
+			<figcaption>
+				<h3><a href="rock-generator">Rock Generator</a></h3>
+				<p>Make black rocks on black background</p>
+			</figcaption>
+		</figure>
+
+		<figure>
+			<div class="img-container"><img src="images/thumb/fow-thumb.jpg"></div>
+			<figcaption>
+				<h3><a href="https://github.com/LeLocTai/Fog-of-war">Fog of War</a></h3>
+				<p>A basic Fog of War implementation for Unity</p>
+			</figcaption>
+		</figure>
+
+		<figure>
+			<div class="img-container"><img src="images/thumb/adder-thumb.jpg"></div>
+			<figcaption>
+				<h3><a href="mechanicalAdder">Mechanical Adder</a></h3>
+				<p>A 6-bits, mechanical, ripple carry adder, using design from Matthias Wandel</p>
+			</figcaption>
+		</figure>
+
+	</article>
+
+
+	<article>
+		<h3>Older projects</h3>
+		<!-- <p>Like projects, but with snarky comment!</p> -->
+
+		<figure>
+			<div class="img-container"><img src="images/thumb/asme-thumb.jpg"></div>
+			<figcaption>
+				<h3><a href="https://leloctai.com/AsMe">Asset Store Metadata Editor</a></h3>
+				<p>Write formatted description for Unity Asset using markdown, with real-time preview.</p>
+				<p>Not updated for the new store re-design. </p>
+			</figcaption>
+		</figure>
+
+		<figure>
+			<div class="img-container"><img src="images/thumb/sleeptime-thumb.jpg"></div>
+			<figcaption>
+				<h3><a href="https://leloctai.com/sleeptime">Sleep Time</a></h3>
+				<p>A mobile-friendly web app that helps you choose the best time to go to sleep, base on REM cycle.</p>
+				<p>I wanted an excuse to made a PWA, somehow it got featured on <a href="https://lifehacker.com/1789822985">lifehacker</a>. If you're here from there, you should know the whole idea doesn't actually work</p>
+			</figcaption>
+		</figure>
+	</article>
+
+
+	<article>
+		<h2><a href="https://blog.leloctai.com">Blog</a></h2>
+
+		<ul id="recent-blog-posts">
+			<p>Nothing here yet...</p>
+		</ul>
+		<template id="blog-post-template">
+			<li>
+				<span class="blog-post-date"></span> - <a href="" class="blog-post-link"></a> - <span class="blog-post-excerpt"></span>
+			</li>
+		</template>
+	</article>
+
+	<div id="footer-seperator"></div>
+	<footer>
+		<a href="https://twitter.com/LeLocTai">Twitter</a>
+		<a href="mailto:contact@leloctai.com">Email</a>
+	</footer>
+	<script src="js/rss.js"></script>
+</body>
+
+</html>

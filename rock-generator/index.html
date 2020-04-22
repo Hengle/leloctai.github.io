@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Rock Generator</title>
+	<meta name="description" content="Make rocks">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+	
+	<link rel="stylesheet" href="/scss/global-clean.css">
+	
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-K6W69HX');
+	</script>	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://leloctai.com/images/rockgen.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@LeLocTai">
+	<meta name="twitter:creator" content="@LeLocTai">	<link rel="stylesheet" href="scss/rockgen.css">
+</head>
+
+<body>
+	<nav>
+		<a href="/" class="brand-link">
+			<img src="/favicon.png" alt="Home page">
+			<h1>Le Loc Tai</h1>
+		</a>
+	
+		<div>
+			<a href="/#projects">Projects</a>
+			<a href="/asset/translucentimage">Unity Asset</a>
+		</div>
+	</nav>
+	<article>
+		<h1 class="hero-text">Rock Generator</h1>
+	</article>
+	<article class="wide">
+		<div class="canvas-wrapper">
+			<div id="unityContainer"></div>
+			<style type="text/css">
+			#loadingBox {
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%, -50%);
+			    text-align: center;
+			}
+			
+			#spinner {
+			    width: auto;
+			}
+			
+			#loadingInfo {
+			    color: #666;
+			    width: 100%;
+			    text-transform: uppercase;
+			    text-align: center;
+			    font-size: 12px;
+			    margin: 10px 0 0 0;
+			}
+			</style>
+			<div id="loadingBox">
+			    <img id="spinner" src="/images/spinner.svg" />
+			    <p id="loadingInfo">Loading...</p>
+			</div>
+		</div>
+	</article>
+	<article>
+		<p>Rock Generator for the purpose of real time rendering. WIP.</p>
+		<p>The generated result contains no UV, you can unwrap it yourself, or use a tri-planar mapping shader like I did here.</p>
+		You can find many different implementations of tri-planar mapping from Ben Golus's <a href="https://github.com/bgolus/Normal-Mapping-for-a-Triplanar-Shader" target="_blank" rel="noopener nofollow">repo</a>
+	</article>
+
+	<div id="footer-seperator"></div>
+	<footer>
+		<a href="https://twitter.com/LeLocTai">Twitter</a>
+		<a href="mailto:contact@leloctai.com">Email</a>
+	</footer>
+	<script src="/js/unity-progress-2019.js"></script>
+	<script src="rockgenwebgl/Build/UnityLoader.js"></script>
+	<script>
+		UnityLoader.instantiate(
+			"unityContainer",
+			"rockgenwebgl/Build/rockgenwebgl.json",
+			{ onProgress: UnityProgress }
+		);
+	</script></body>
+
+</html>
